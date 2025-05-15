@@ -1,0 +1,230 @@
+<section class="pricing-section">
+  <div class="pricing-card plus">
+    <div class="pricing-badge">PLUS</div>
+    <div class="pricing-desc">For Beginners and Students</div>
+    <div class="pricing-price">Free</div>
+    <ul class="pricing-features">
+      <li class="active">1000+ Components</li>
+      <li class="active">340+ Figma Variables</li>
+      <li>Dark mode</li>
+      <li>Example Screens</li>
+      <li>Additional Components</li>
+      <li>Web3 Components</li>
+      <li class="active">FREE future updates</li>
+    </ul>
+    <button class="pricing-btn">Get it FREE!</button>
+  </div>
+  <div class="pricing-card pro">
+    <div class="pricing-badge">PRO</div>
+    <div class="pricing-desc">For Design Professionals and Design Teams</div>
+    <div class="pricing-price">$59</div>
+    <ul class="pricing-features">
+      <li class="active">One time purchase</li>
+      <li class="active">1400+ Components</li>
+      <li class="active">340+ Figma Variables</li>
+      <li class="active">Dark mode</li>
+      <li class="active">Example Screens</li>
+      <li class="active">Additional Components</li>
+      <li class="active">Web3 Components</li>
+      <li class="active">FREE future updates</li>
+    </ul>
+    <div class="pricing-discount">
+      USE CODE <span>FEELINGLUCKY</span> FOR 50% DISCOUNT
+    </div>
+    <button class="pricing-btn pro">Buy now</button>
+    <button class="pricing-btn figma">Preview in Figma <span>↗</span></button>
+  </div>
+  <div class="pricing-card custom">
+    <div class="pricing-logo"><img src="/logo.svg" alt="logo" /></div>
+    <div class="pricing-desc">Get a custom Design System for your project.</div>
+    <div class="pricing-price">$2499</div>
+    <ul class="pricing-features">
+      <li class="active">Everything in PRO</li>
+      <li class="active">Brand Integration</li>
+      <li class="active">Custom Design Tokens</li>
+      <li class="active">Style Guide</li>
+      <li class="active">Product specific component library</li>
+    </ul>
+    <div class="pricing-delivery">
+      DELIVERY TIME COULD BE 7-10 WORKING DAYS.
+    </div>
+    <button class="pricing-btn custom">Get in touch!</button>
+  </div>
+</section>
+
+<style>
+  .pricing-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    margin: 2rem auto;
+    max-width: 1200px;
+    overflow-x: auto;
+  }
+  .pricing-card {
+    background: #18181b;
+    border-radius: 28px;
+    box-shadow: 0 2px 16px #0003;
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    min-width: 300px;
+    max-width: 350px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: "Poppins", Arial, sans-serif;
+    margin-bottom: 2rem;
+  }
+  .pricing-badge {
+    background: linear-gradient(90deg, #a259ff 0%, #6a82fb 100%);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.3rem 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    letter-spacing: 1px;
+  }
+  .pricing-card.pro .pricing-badge {
+    background: linear-gradient(90deg, #ff3cac 0%, #784ba0 100%);
+  }
+  .pricing-card.custom .pricing-badge,
+  .pricing-card.custom .pricing-logo {
+    background: none;
+    margin-bottom: 1.2rem;
+  }
+  .pricing-card.custom .pricing-logo img {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #d1ff00;
+    padding: 4px;
+  }
+  .pricing-desc {
+    color: #b3b3b3;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .pricing-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-align: center;
+  }
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+  }
+  .pricing-features li {
+    margin-bottom: 0.7rem;
+    color: #b3b3b3;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.7;
+  }
+  .pricing-features li.active {
+    color: #fff;
+    opacity: 1;
+  }
+  .pricing-features li.active::before {
+    content: "\2713";
+    color: #a259ff;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .pricing-card.pro .pricing-features li.active::before {
+    color: #ff3cac;
+  }
+  .pricing-card.custom .pricing-features li.active::before {
+    color: #d1ff00;
+  }
+  .pricing-btn {
+    width: 100%;
+    padding: 0.9rem 0;
+    border-radius: 12px;
+    border: none;
+    background: #232326;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .pricing-btn:hover {
+    background: #232326cc;
+    color: #d1ff00;
+  }
+  .pricing-btn.pro {
+    background: linear-gradient(90deg, #ff3cac 0%, #784ba0 100%);
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .pricing-btn.figma {
+    background: #232326;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+  }
+  .pricing-btn.custom {
+    background: #d1ff00;
+    color: #18181b;
+    font-weight: 700;
+  }
+  .pricing-discount {
+    color: #ff3cac;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .pricing-discount span {
+    color: #fff;
+    font-weight: 700;
+  }
+  .pricing-delivery {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  @media (max-width: 1100px) {
+    .pricing-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .pricing-card {
+      max-width: 95vw;
+      min-width: 260px;
+      width: 100%;
+    }
+  }
+
+  /* Ajustes para alinear contenido al final de las tarjetas estiradas */
+  .pricing-card.plus > .pricing-btn,
+  .pricing-card.pro > .pricing-discount,
+  .pricing-card.custom > .pricing-delivery {
+    margin-top: auto;
+  }
+</style>

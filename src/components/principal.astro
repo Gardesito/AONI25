@@ -1,0 +1,112 @@
+---
+
+---
+
+<div class="hero-main">
+  <div class="hero-content">
+    <h1>Disfruta tu<br />empresa</h1>
+    <p>
+      Diseñamos la esencia visual y estratégica de tu marca para que destaque
+      donde realmente importa.
+    </p>
+    <button class="hero-btn">Contactar</button>
+  </div>
+  <div class="hero-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+<style>
+  .hero-main {
+    background: #18181b;
+    border-radius: 32px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 48px 32px 32px 32px;
+    min-height: 420px;
+    position: relative;
+    box-shadow: 0 4px 32px #0003;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  .hero-content h1 {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+  .hero-content p {
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2.2rem;
+    max-width: 600px;
+  }
+  .hero-btn {
+    background: #fff;
+    color: #18181b;
+    border: none;
+    border-radius: 18px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s;
+    box-shadow: 0 2px 8px #0002;
+  }
+  .hero-btn:hover {
+    background: #e6e6e6;
+  }
+  .hero-dots {
+    position: absolute;
+    right: 32px;
+    bottom: 24px;
+    display: flex;
+    gap: 12px;
+  }
+  .dot {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.2s;
+  }
+  .dot.active {
+    opacity: 1;
+  }
+  @media (max-width: 700px) {
+    .hero-main {
+      max-width: 98vw;
+      padding: 32px 8px 32px 8px;
+      min-height: 320px;
+    }
+    .hero-content h1 {
+      font-size: 2.1rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+    .hero-dots {
+      right: 16px;
+      bottom: 12px;
+    }
+  }
+</style>
