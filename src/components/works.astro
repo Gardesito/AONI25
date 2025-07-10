@@ -1,0 +1,142 @@
+<section class="works-section">
+  <div class="works-header">
+    <h2>
+      Las marcas que destacan comienzan en Aoni<br />
+      <span>Sitio web de estilo familiar</span>
+    </h2>
+  </div>
+  <div class="bento-grid">
+    <div class="bento-item bento-a">
+      <img
+        src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748024719/freepik__eliass-the-style-is-cold-blue-professionally-color__26161_ucuedd.jpg"
+        alt="work1"
+      />
+    </div>
+    <div class="bento-item bento-b">
+      <img
+        src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748024719/freepik__eliass-the-style-is-cold-blue-professionally-color__26161_ucuedd.jpg"
+        alt="work2"
+      />
+    </div>
+    <div class="bento-item bento-c">
+      <img src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748024719/freepik__eliass-the-style-is-cold-blue-professionally-color__26161_ucuedd.jpg" alt="work3" />
+    </div>
+    <div class="bento-item bento-d">
+      <img src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748024719/freepik__eliass-the-style-is-cold-blue-professionally-color__26161_ucuedd.jpg" alt="work4" />
+    </div>
+    <div class="bento-item bento-e">
+      <img src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748024719/freepik__eliass-the-style-is-cold-blue-professionally-color__26161_ucuedd.jpg" alt="work5" />
+    </div>
+    <div class="bento-item bento-f">
+      <img src="" alt="work6" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .works-section {
+    /*  background: #18181b; */
+    border-radius: 32px;
+    max-width: 900px;
+    margin: 48px auto 0 auto;
+    padding: 40px 16px 32px 16px;
+    box-sizing: border-box;
+  }
+  .works-header h2 {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+  .works-header h2 span {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-top: 2px;
+    color: #fff;
+    opacity: 0.92;
+  }
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 18px;
+    grid-template-areas:
+      "a b c"
+      "d e c"
+      "d f f";
+    min-height: 600px;
+  }
+  .bento-item {
+    background: #8f5be8;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .bento-a {
+    grid-area: a;
+  }
+  .bento-b {
+    grid-area: b;
+  }
+  .bento-c {
+    grid-area: c;
+  }
+  .bento-d {
+    grid-area: d;
+  }
+  .bento-e {
+    grid-area: e;
+  }
+  .bento-f {
+    grid-area: f;
+  }
+
+  /* Responsive: mantener estructura bento */
+  @media (max-width: 900px) {
+    .works-section {
+      max-width: 98vw;
+      padding: 18px 2px 12px 2px;
+      border-radius: 18px;
+    }
+    .bento-grid {
+      gap: 6px;
+      min-height: 320px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b c"
+        "d e c"
+        "d f f";
+    }
+    .bento-item {
+      border-radius: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    .bento-grid {
+      gap: 3px;
+      min-height: 180px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b c"
+        "d e c"
+        "d f f";
+    }
+    .bento-item {
+      border-radius: 6px;
+    }
+  }
+</style>

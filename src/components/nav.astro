@@ -1,105 +1,132 @@
 <nav class="navbar">
-  <div class="navbar-logo">
-    <img src="/logo.svg" alt="Logo" />
-    <span>aoni</span>
+  <div class="navbar-left">
+    <img
+      src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTVyaWx6YWZmNWhmZnhpaGthMzlhbzd0dzFxdTB4YzcwZTY0OHRkNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/74augs47dylVNAPIEt/giphy.gif"
+      alt="Aoni Design Logo"
+      class="logo"
+    />
+    <div class="brand">
+      <span class="brand-title">Aoni Design</span>
+      <img src="/plus.svg" alt="Aoni Design mini" class="brand-mini" />
+    </div>
   </div>
-  <ul class="navbar-links">
+  <ul class="navbar-center">
     <li><a href="#">Inicio</a></li>
     <li><a href="#">Nosotros</a></li>
     <li><a href="#">Servicios</a></li>
-    <li><a href="#"></a></li>
-    <li><a class="product-day" href="#">Precios</a></li>
-    <li><a class="preview" href="#"><span class="dot"></span>Contacto</a></li>
+    <li><a href="#">Works</a></li>
   </ul>
+  <div class="navbar-right">
+    <a href="#" class="contact-btn">
+      <span class="dot-green"></span>Contactanos
+    </a>
+  </div>
   <button class="navbar-toggle" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
   .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    width: 100%;
+    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 0.5rem 1.5rem;
-    border-radius: 16px;
-    /*     margin: 1rem auto;
- */
-    max-width: 900px;
-    margin: auto;
-
-    box-shadow: 0 2px 8px #0002;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    min-height: 56px;
   }
-  .navbar-logo {
+  .navbar-left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: bold;
-    font-size: 1.3rem;
+  }
+  .logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  .brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+  .brand-title {
     color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1;
   }
-  .navbar-logo img {
-    width: 32px;
-    height: 32px;
-    background: #fff;
-    border-radius: 8px;
+  .brand-mini {
+    width: 60px;
+    height: 18px;
+    margin-top: 2px;
+    object-fit: contain;
   }
-  .navbar-links {
+  .navbar-center {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 2.5rem;
+    background: #232326;
+    border-radius: 12px;
+    padding: 0.2rem 2.5rem;
+    margin: 0 1.5rem;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    min-width: 350px;
+    justify-content: center;
   }
-  .navbar-links a {
-    color: #b3b3b3;
+  .navbar-center li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.4rem 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    display: block;
+  }
+  .navbar-center li a:hover {
+    color: #ff6a3d;
+    background: #232326;
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #232326;
+    color: #fff;
+    font-weight: 400;
     border-radius: 8px;
+    padding: 0.3rem 1.1rem 0.3rem 0.7rem;
+    text-decoration: none;
+    font-size: 1.05rem;
     transition:
       background 0.2s,
       color 0.2s;
-    font-family: poppins;
+    border: none;
+    outline: none;
   }
-  .navbar-links a:hover {
-    background: #232326;
-    color: #fff;
-    font-family: poppins;
-  }
-  .product-day {
-    background: #232326;
+  .contact-btn:hover {
+    background: #2e2e32;
     color: #ff6a3d;
-    font-weight: 500;
-    border-radius: 8px;
-    margin-right: 0.3rem;
   }
-  .preview {
-    background: #232326;
-    color: #fff;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-  .preview .dot {
-    width: 16px;
-    height: 16px;
-    background: url("https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f308.svg")
-      no-repeat center/cover;
+  .dot-green {
+    width: 12px;
+    height: 12px;
+    background: #00ff47;
+    border-radius: 50%;
     display: inline-block;
+    margin-right: 2px;
+    box-shadow: 0 0 6px #00ff47cc;
   }
   .navbar-toggle {
     display: none;
@@ -108,6 +135,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: 1rem;
   }
   .navbar-toggle span {
     width: 24px;
@@ -116,32 +144,50 @@
     border-radius: 2px;
     display: block;
   }
+  @media (max-width: 900px) {
+    .navbar-center {
+      gap: 1.2rem;
+      padding: 0.2rem 1rem;
+      min-width: unset;
+    }
+    .brand-mini {
+      width: 48px;
+    }
+  }
   @media (max-width: 700px) {
     .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem;
-      max-width: 100%;
+      flex-wrap: wrap;
+      padding: 0.7rem 0.7rem;
     }
-    .navbar-links {
+    .navbar-center {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #232326;
       flex-direction: column;
-      width: 100%;
-      gap: 0.5rem;
-      margin-top: 0.7rem;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 0;
+      border-radius: 0 0 16px 16px;
+      margin: 0;
+      z-index: 1001;
       display: none;
     }
-    .navbar-links.active {
+    .navbar-center.active {
       display: flex;
     }
     .navbar-toggle {
       display: flex;
+    }
+    .navbar-right {
       margin-left: auto;
     }
   }
 </style>
 <script>
   const toggle = document.querySelector(".navbar-toggle");
-  const links = document.querySelector(".navbar-links");
+  const links = document.querySelector(".navbar-center");
   if (toggle && links) {
     toggle.addEventListener("click", () => {
       links.classList.toggle("active");

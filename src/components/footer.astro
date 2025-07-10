@@ -1,0 +1,269 @@
+<footer class="footer-minimal">
+  <div class="footer-row">
+    <div class="footer-col left">
+      <span class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+          ><path
+            d="M16 2C8.268 2 2 8.268 2 16c0 7.732 6.268 14 14 14s14-6.268 14-14C30 8.268 23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"
+            fill="#fff"></path><path
+            d="M16 8a8 8 0 100 16 8 8 0 000-16z"
+            fill="#fff"></path></svg
+        >
+      </span>
+      <span class="footer-copyright"
+        >© 2025 Acme Corp. Todos los derechos reservados.</span
+      >
+    </div>
+    <nav class="footer-col center">
+      <a href="#">Docs</a>
+      <a href="#">Ayuda</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos</a>
+    </nav>
+    <div class="footer-col right">
+      <div class="footer-appearance">
+        <span>Apariencia</span>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="GitHub"
+          ><svg width="22" height="22" fill="currentColor"
+            ><circle
+              cx="11"
+              cy="11"
+              r="10"
+              stroke="#fff"
+              stroke-width="2"
+              fill="none"></circle><circle cx="11" cy="11" r="6" fill="#fff"
+            ></circle></svg
+          ></a
+        >
+        <a href="#" aria-label="X"
+          ><svg width="22" height="22" fill="currentColor"
+            ><rect x="3" y="10" width="16" height="2" rx="1" fill="#fff"
+            ></rect></svg
+          ></a
+        >
+        <a href="#" aria-label="Discord"
+          ><svg width="22" height="22" fill="currentColor"
+            ><circle
+              cx="11"
+              cy="11"
+              r="10"
+              stroke="#fff"
+              stroke-width="2"
+              fill="none"></circle><rect
+              x="7"
+              y="9"
+              width="8"
+              height="4"
+              rx="2"
+              fill="#fff"></rect></svg
+          ></a
+        >
+        <a href="#" aria-label="LinkedIn"
+          ><svg width="22" height="22" fill="currentColor"
+            ><rect
+              x="4"
+              y="4"
+              width="14"
+              height="14"
+              rx="3"
+              stroke="#fff"
+              stroke-width="2"
+              fill="none"></rect><rect
+              x="8"
+              y="8"
+              width="2"
+              height="6"
+              fill="#fff"></rect><rect
+              x="12"
+              y="8"
+              width="2"
+              height="6"
+              fill="#fff"></rect></svg
+          ></a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-minimal {
+    background: #18181b;
+    color: #fff;
+    padding: 0 0 0.5rem 0;
+    width: 100vw;
+    min-height: 90px;
+    font-family: "Poppins", sans-serif;
+    border-top: 1px solid #232326;
+  }
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.7rem 2vw 0.2rem 2vw;
+    flex-wrap: wrap;
+  }
+  .footer-col {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .footer-col.left {
+    min-width: 220px;
+    gap: 0.7rem;
+  }
+  .footer-logo svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  .footer-copyright {
+    color: #b3b3b3;
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
+  .footer-col.center {
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .footer-col.center a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  .footer-col.center a:hover {
+    color: #fff;
+  }
+  .footer-col.right {
+    gap: 1.5rem;
+    min-width: 220px;
+    justify-content: flex-end;
+  }
+  .footer-appearance {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b3b3b3;
+    font-size: 1rem;
+  }
+  #theme-toggle {
+    background: #232326;
+    border: none;
+    border-radius: 18px;
+    padding: 0.2rem 0.7rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: background 0.2s;
+  }
+  #theme-toggle:active,
+  #theme-toggle:focus {
+    outline: 2px solid #ff6a3d;
+  }
+  .icon-sun,
+  .icon-moon {
+    pointer-events: none;
+  }
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .footer-social a {
+    color: #b3b3b3;
+    opacity: 0.7;
+    transition:
+      color 0.2s,
+      opacity 0.2s;
+    font-size: 1.3rem;
+  }
+  .footer-social a:hover {
+    color: #fff;
+    opacity: 1;
+  }
+  @media (max-width: 900px) {
+    .footer-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1.2rem 2vw 0.7rem 2vw;
+    }
+    .footer-col.center {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      width: 100%;
+    }
+    .footer-col.right {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .footer-row {
+      padding: 1.2rem 2vw 0.7rem 2vw;
+      gap: 1.5rem;
+    }
+    .footer-col.left,
+    .footer-col.center,
+    .footer-col.right {
+      min-width: unset;
+      width: 100%;
+      justify-content: flex-start;
+      gap: 0.7rem;
+    }
+    .footer-col.center {
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .footer-social {
+      gap: 0.5rem;
+    }
+  }
+</style>
+<script>
+  const themeToggle = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+
+  function setTheme(mode: string) {
+    if (mode === "dark") {
+      root.style.setProperty("--bg", "#18181b");
+      root.style.setProperty("--text", "#fff");
+      document.body.style.background = "#18181b";
+      document.body.style.color = "#fff";
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.style.setProperty("--bg", "#fff");
+      root.style.setProperty("--text", "#18181b");
+      document.body.style.background = "#fff";
+      document.body.style.color = "#18181b";
+      localStorage.setItem("theme", "light");
+    }
+  }
+
+  function toggleTheme() {
+    const current = localStorage.getItem("theme") || "dark";
+    setTheme(current === "dark" ? "light" : "dark");
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", toggleTheme);
+    // Inicializar tema
+    const saved = localStorage.getItem("theme");
+    if (saved) setTheme(saved);
+  }
+</script>

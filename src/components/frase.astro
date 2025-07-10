@@ -1,0 +1,154 @@
+<section class="frase-section">
+  <div class="frase-logo">
+    <img
+      src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1752173769/aoni_negroasdasdasd_h6n7zb.png"
+      alt="Logo Aoni"
+    />
+  </div>
+  <h2 class="frase-author">Project by: Elias Solis</h2>
+  <p class="frase-desc">
+    Impulsamos tu identidad con diseño creativo,<br />
+    branding sólido y contenido visual que conecta.
+  </p>
+  <div class="frase-actions">
+    <a href="mailto:aonistudio@gmail.com" class="frase-btn frase-btn-mail">
+      <span class="frase-btn-title">Escuchamos tu propuesta</span><br />
+      <span class="frase-btn-mail">aonistudio@gmail.com</span>
+    </a>
+    <a href="#" class="frase-btn frase-btn-ig">
+      <span class="frase-btn-icon">&#x1F4F7;</span>
+      <span>Síguenos para mas<br />propuestas y diseños</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .frase-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 48px 12px 32px 12px;
+    border-radius: 32px;
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    box-shadow: none;
+  }
+  .frase-logo {
+    background: #fff;
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .frase-logo img {
+    width: 80px;
+    height: 80px;
+    display: block;
+  }
+  .frase-author {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  .frase-desc {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2.2rem;
+    line-height: 1.4;
+    opacity: 0.95;
+  }
+  .frase-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .frase-btn {
+    background: #232326;
+    color: #fff;
+    border-radius: 14px;
+    padding: 1rem 2.2rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 220px;
+    box-shadow: 0 2px 8px #0002;
+    border: none;
+    transition:
+      background 0.2s,
+      color 0.2s;
+    margin-bottom: 0.5rem;
+  }
+  .frase-btn:hover {
+    background: #18181b;
+    color: #ff6a3d;
+  }
+  .frase-btn-title {
+    color: #b3b3b3;
+    font-size: 0.98rem;
+    margin-bottom: 2px;
+  }
+  .frase-btn-mail {
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: 500;
+  }
+  .frase-btn-ig {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+    min-width: 260px;
+  }
+  .frase-btn-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  @media (max-width: 600px) {
+    .frase-section {
+      max-width: 98vw;
+      padding: 24px 4px 18px 4px;
+      border-radius: 18px;
+    }
+    .frase-logo {
+      padding: 18px;
+      border-radius: 14px;
+    }
+    .frase-logo img {
+      width: 54px;
+      height: 54px;
+    }
+    .frase-author {
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+    .frase-desc {
+      font-size: 0.98rem;
+      margin-bottom: 1.2rem;
+    }
+    .frase-actions {
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: center;
+    }
+    .frase-btn,
+    .frase-btn-ig {
+      min-width: 90vw;
+      padding: 0.8rem 0.5rem;
+      font-size: 0.98rem;
+    }
+  }
+</style>

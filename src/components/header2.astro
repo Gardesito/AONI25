@@ -131,6 +131,7 @@ body {
     padding: 1rem 0.5rem;
     background: transparent;
     box-shadow: none;
+    overflow-x: hidden;
   }
 
   .item {
@@ -317,15 +318,63 @@ body {
       }
     }
   }
+
+  .slider {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 8px;
+    position: relative;
+  }
+
+  @media (max-width: 900px) {
+    main {
+      padding: 1rem 0.5rem;
+    }
+    .slider {
+      padding: 0 8px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    main {
+      padding: 0.5rem 0.2rem;
+    }
+    .slider {
+      padding: 0 4vw;
+      max-width: 100vw;
+    }
+    .item {
+      min-width: 110px;
+      width: 110px;
+      left: unset !important;
+      right: unset !important;
+    }
+    .content {
+      left: 1rem;
+      width: 90vw;
+      max-width: 95vw;
+    }
+  }
 </style>
 
 <script>
   const slider = document.querySelector(".slider");
 
-  function activate(e) {
+  function activate(e: Event) {
     const items = document.querySelectorAll(".item");
-    e.target.matches(".next") && slider.append(items[0]);
-    e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+    if (!slider) return;
+    if (
+      e.target &&
+      (e.target as Element).matches &&
+      (e.target as Element).matches(".next")
+    )
+      slider.append(items[0]);
+    if (
+      e.target &&
+      (e.target as Element).matches &&
+      (e.target as Element).matches(".prev")
+    )
+      slider.prepend(items[items.length - 1]);
   }
 
   document.addEventListener("click", activate, false);

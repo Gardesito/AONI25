@@ -1,0 +1,260 @@
+---
+
+---
+
+<div class="profile-card">
+  <img
+    class="profile-bg"
+    src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748024719/freepik__eliass-the-style-is-cold-blue-professionally-color__26161_ucuedd.jpg"
+    alt="Elias Solis"
+  />
+  <div class="profile-blur"></div>
+  <div class="profile-gradient"></div>
+  <div class="profile-content">
+    <h2 class="profile-name">
+      Elias Solis
+      <span>
+        <img
+          src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748025058/checklist_10629607_yt6huq.png"
+          alt=""
+          class="verified"
+        /></span
+      >
+      <!--  <span class="verified" title="Verificado">✔️</span> -->
+    </h2>
+    <p class="profile-desc">
+      I help brands communicate with clarity and connect on an emotional level.
+    </p>
+    <div class="profile-stats">
+      <div>
+        <span class="stat-value"> <span class="star">★</span> 4.8</span>
+        <span class="stat-label">Rating</span>
+      </div>
+      <div>
+        <span class="stat-value">$45k+</span>
+        <span class="stat-label">Earned</span>
+      </div>
+      <div>
+        <span class="stat-value">$50/hr</span>
+        <span class="stat-label">Rate</span>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <button class="contact-btn">
+        <span class="icon-mail"></span>
+        <img
+          src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748028144/mensaje_olx3wz.png"
+          alt=""
+        />
+        <strong>Get in Touch </strong>
+      </button>
+      <button class="bookmark-btn" aria-label="Bookmark">
+        <span class="icon-bookmark"></span>
+        <img
+          src="https://res.cloudinary.com/dd42xc1xp/image/upload/v1748028055/save-instagramw_5662990_qqch86.png"
+          alt=""
+        />
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .verified {
+    width: 20px;
+    height: 20px;
+  }
+
+  .profile-card {
+    max-width: 370px;
+    width: 100%;
+    aspect-ratio: 3/4.2;
+    background: #111;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 4px 32px #0005;
+    color: #fff;
+    margin: 32px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+    z-index: 0;
+  }
+  .profile-card:hover .profile-bg {
+    transform: scale(1.08);
+  }
+  .profile-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .profile-blur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 44%;
+    width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .profile-gradient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    width: 100%;
+    z-index: 3;
+    background: linear-gradient(
+      0deg,
+      rgba(10, 10, 20, 0.92) 60%,
+      rgba(10, 10, 20, 0.5) 90%,
+      rgba(10, 10, 20, 0) 100%
+    );
+  }
+  .profile-content {
+    position: relative;
+    z-index: 4;
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .verified {
+    color: #2196f3;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+  .profile-desc {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .profile-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.1rem 0 0.7rem 0;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .profile-stats div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #222;
+  }
+  .profile-stats div:last-child {
+    border-right: none;
+  }
+  .stat-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  .stat-label {
+    font-size: 0.85rem;
+    color: #bdbdbd;
+  }
+  .star {
+    color: #ffd600;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+  .profile-actions {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .contact-btn {
+    flex: 1;
+    background: #fff;
+    color: #18181b;
+    border: none;
+    border-radius: 16px;
+    padding: 0.7rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .contact-btn:hover {
+    background: #e0e0e0;
+  }
+  .bookmark-btn {
+    background: #232326;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 0.7rem 0.9rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .bookmark-btn:hover {
+    background: #333;
+  }
+  @media (max-width: 500px) {
+    .profile-card {
+      max-width: 98vw;
+      border-radius: 18px;
+      aspect-ratio: 3/4.2;
+    }
+    .profile-content {
+      padding: 1rem 0.7rem 0.7rem 0.7rem;
+    }
+    .profile-name {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Glow azul, puedes cambiar el color en .profile-card.blue-glow */
+  .profile-card.blue-glow .profile-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at 60% 80%,
+      rgba(0, 140, 255, 0.35) 0%,
+      rgba(0, 140, 255, 0.12) 60%,
+      transparent 100%
+    );
+    filter: blur(32px);
+    opacity: 0.85;
+    transition: background 0.4s;
+  }
+
+  /* Si quieres otro color, por ejemplo naranjo, puedes hacer: */
+  /*
+  .profile-card.orange-glow .profile-glow {
+    background: radial-gradient(ellipse at 60% 80%, rgba(255,140,0,0.35) 0%, rgba(255,140,0,0.12) 60%, transparent 100%);
+  }
+  */
+</style>
