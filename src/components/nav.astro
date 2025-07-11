@@ -10,18 +10,18 @@
       <img src="/plus.svg" alt="Aoni Design mini" class="brand-mini" />
     </div>
   </div>
-  <ul class="navbar-center">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Nosotros</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Works</a></li>
+  <ul class="navbar-center" id="navbar-center">
+    <li><a href="#" class="nav-link">Inicio</a></li>
+    <li><a href="#" class="nav-link">Nosotros</a></li>
+    <li><a href="#" class="nav-link">Servicios</a></li>
+    <li><a href="#" class="nav-link">Works</a></li>
   </ul>
   <div class="navbar-right">
     <a href="#" class="contact-btn">
       <span class="dot-green"></span>Contactanos
     </a>
   </div>
-  <button class="navbar-toggle" aria-label="Abrir menú">
+  <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -38,6 +38,8 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     min-height: 56px;
+    position: relative;
+    z-index: 1002;
   }
   .navbar-left {
     display: flex;
@@ -79,6 +81,7 @@
     list-style: none;
     min-width: 350px;
     justify-content: center;
+    transition: all 0.25s;
   }
   .navbar-center li a {
     color: #fff;
@@ -136,6 +139,7 @@
     border: none;
     cursor: pointer;
     margin-left: 1rem;
+    z-index: 1003;
   }
   .navbar-toggle span {
     width: 24px;
@@ -156,26 +160,45 @@
   }
   @media (max-width: 700px) {
     .navbar {
+      flex-direction: row;
       flex-wrap: wrap;
       padding: 0.7rem 0.7rem;
     }
     .navbar-center {
-      position: absolute;
-      top: 60px;
+      position: fixed;
+      top: 56px;
       left: 0;
+      width: 100vw;
       right: 0;
       background: #232326;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.2rem 0;
+      align-items: stretch;
+      gap: 0;
+      padding: 0;
       border-radius: 0 0 16px 16px;
       margin: 0;
-      z-index: 1001;
+      z-index: 2000;
       display: none;
+      box-shadow: 0 8px 32px #0005;
     }
     .navbar-center.active {
       display: flex;
+    }
+    .navbar-center li {
+      width: 100%;
+      border-bottom: 1px solid #232326;
+      text-align: center;
+    }
+    .navbar-center li:last-child {
+      border-bottom: none;
+    }
+    .navbar-center li a {
+      width: 100%;
+      display: block;
+      padding: 1.1rem 0;
+      font-size: 1.15rem;
+      border-radius: 0;
+      background: none;
     }
     .navbar-toggle {
       display: flex;
@@ -186,11 +209,22 @@
   }
 </style>
 <script>
-  const toggle = document.querySelector(".navbar-toggle");
-  const links = document.querySelector(".navbar-center");
-  if (toggle && links) {
-    toggle.addEventListener("click", () => {
-      links.classList.toggle("active");
-    });
+  // Script seguro para Astro/hidratación
+  if (typeof window !== "undefined") {
+    const toggle = document.getElementById("navbar-toggle");
+    const links = document.getElementById("navbar-center");
+    const navLinks = document.querySelectorAll(".nav-link");
+    if (toggle && links) {
+      toggle.addEventListener("click", () => {
+        links.classList.toggle("active");
+      });
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 700) {
+            links.classList.remove("active");
+          }
+        });
+      });
+    }
   }
 </script>

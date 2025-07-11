@@ -29,9 +29,10 @@ import Frase from "../components/frase.astro";
       <Principal />
       <Servicios />
       <Works />
+      <Price />
       <Frase />
       <!--   <Hero /> -->
-      <!--      <Price /> -->
+
       <!--     <Footer /> -->
     </div>
   </body>
@@ -55,5 +56,17 @@ import Frase from "../components/frase.astro";
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #000000;
+  }
+
+  @media (max-width: 900px) {
+    .container1 {
+      padding: 0 16px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container1 {
+      padding: 0 12px;
+    }
   }
 </style>

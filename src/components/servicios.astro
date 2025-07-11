@@ -35,7 +35,7 @@
         >
       </div>
       <div>
-        <h3>Brandings</h3>
+        <h3>Brandingss</h3>
         <p>Creamos marcas desde cero y rediseñamos</p>
       </div>
     </div>
@@ -180,9 +180,21 @@
   }
   @media (max-width: 900px) {
     .servicios-bento-2x2 {
-      grid-template-columns: 1fr;
-      grid-template-rows: none;
+      display: flex;
+      flex-direction: column;
       gap: 0.7rem;
+    }
+    .servicio-socialmedia {
+      order: 1;
+    }
+    .servicio-branding {
+      order: 2;
+    }
+    .servicio-redes {
+      order: 3;
+    }
+    .servicio-web {
+      order: 4;
     }
     .servicio-card {
       padding: 0.9rem 0.6rem 0.8rem 0.6rem;
