@@ -10,6 +10,8 @@ import Prueba from "../components/prueba.astro";
 import Works from "../components/works.astro";
 import Servicios from "../components/servicios.astro";
 import Frase from "../components/frase.astro";
+import WhatsappBtn from "../components/whatsapp-btn.astro";
+import Preguntas from "../components/preguntas.astro";
 ---
 
 <!doctype html>
@@ -21,17 +23,20 @@ import Frase from "../components/frase.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
   </head>
+  <WhatsappBtn />
   <body>
-     <!--  <Barra /> -->
+    <!--  <Barra /> -->
     <div class="container1">
       <Nav />
+
       <!--  <Prueba /> -->
       <Principal />
       <Servicios />
       <Works />
       <Price />
       <Frase />
-      <!--   <Hero /> -->
+
+      <Preguntas />
 
       <!--     <Footer /> -->
     </div>
