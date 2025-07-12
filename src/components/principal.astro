@@ -3,18 +3,18 @@
 ---
 
 <div class="main-hero">
-  <div class="main-quote">
+  <!-- <div class="main-quote">
     “Diseños hechos para conectar, vender y destacar”
-  </div>
-  <h1 class="main-title">
+  </div> -->
+  <h1 class="main-title main-appear">
     Creative web &<br />
     brand design studio
   </h1>
-  <p class="main-desc">
+  <p class="main-desc main-appear">
     We create websites, branding, and social media that<br />
     look great and work even better.
   </p>
-  <div class="main-actions">
+  <div class="main-actions main-appear">
     <a href="#" class="main-btn main-btn-primary">
       Empezá tu proyecto <span class="arrow">→</span>
     </a>
@@ -117,6 +117,18 @@
     background: #18181b;
     color: #ff6a3d;
   }
+  /* Animación fade-in para principal */
+  .main-appear {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .main-appear.main-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
   @media (max-width: 700px) {
     .main-hero {
       max-width: 98vw;
@@ -152,3 +164,14 @@
     }
   }
 </style>
+<script>
+  if (typeof window !== "undefined") {
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.querySelectorAll(".main-appear").forEach((el) => {
+          el.classList.add("main-visible");
+        });
+      }, 1000);
+    });
+  }
+</script>
